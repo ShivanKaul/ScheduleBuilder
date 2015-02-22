@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:id="@+id/maxTimeLabel"
+        android:text="@string/max_time_hint"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/maxTime"
+        android:hint="@string/minutes"
+        android:textSize="15dp"
+        android:layout_below="@id/maxTimeLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <TextView android:id="@+id/breakTimeLabel"
+        android:text="@string/break_hint"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/maxTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/breakTime"
+        android:hint="@string/minutes"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/breakTimeLabel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <EditText android:id="@+id/startTime"
+        android:hint="@string/start_time"
+        android:layout_below="@id/breakTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="datetime" />
+
+    <RadioGroup android:id="@+id/timeAbbr"
+        android:layout_below="@id/breakTime"
+        android:layout_toRightOf="@id/startTime"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:text="pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <CheckBox android:id="@+id/setTimer"
+        android:hint="@string/timer_set"
+        android:layout_below="@id/timeAbbr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/addTask"
+        android:hint="@string/add_tasks"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick=""/>
+
+</RelativeLayout>
